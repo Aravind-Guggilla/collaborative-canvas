@@ -45,6 +45,12 @@ app.get('/', (req, res) => {
   console.log(req.query)
 })
 
-server.listen(5000, () => {
-  console.log('Server is running on http://localhost:5000')
+// server.listen(5000, () => {
+//   console.log('Server is running on http://localhost:5000')
+// })
+
+const PORT = process.env.PORT || 5000
+
+server.listen(PORT, () => {
+  console.log(`Socket server running on port ${PORT}`)
 })
