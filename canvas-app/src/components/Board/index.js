@@ -4,7 +4,8 @@ import {io} from 'socket.io-client'
 
 // STEP-2 :
 // Connect client to Socket.io SERVER (not React server)
-const socket = io('http://localhost:5000')
+// const socket = io('http://localhost:5000')
+const socket = io(import.meta.env.VITE_SOCKET_URL)
 
 class Board extends Component {
   componentDidMount() {
