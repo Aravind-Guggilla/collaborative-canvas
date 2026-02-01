@@ -5,7 +5,18 @@ import {io} from 'socket.io-client'
 // STEP-2 :
 // Connect client to Socket.io SERVER (not React server)
 // const socket = io('http://localhost:5000')
-const socket = io(import.meta.env.VITE_SOCKET_URL)
+
+const SOCKET_URL = "https://collaborative-canvas-production-05a3.up.railway.app/";
+
+console.log("Using socket URL:", SOCKET_URL);
+
+const socket = io(SOCKET_URL, {
+  transports: ["websocket"],
+});
+
+
+
+
 
 class Board extends Component {
   componentDidMount() {
@@ -26,7 +37,6 @@ class Board extends Component {
     // Listen for drawing data sent by OTHER users
     socket.on('draw-segment', data => {
       this.drawRemoteSegment(data)
-      console.log('Received drawing data:', data)
     })
 
     socket.on('disconnect', () => {
