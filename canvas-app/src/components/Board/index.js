@@ -25,6 +25,7 @@ class Board extends Component {
     // Listen for drawing data sent by OTHER users
     socket.on('draw-segment', data => {
       this.drawRemoteSegment(data)
+      console.log('Received drawing data:', data)
     })
 
     socket.on('disconnect', () => {
