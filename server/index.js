@@ -32,9 +32,7 @@ io.on('connection', socket => { // this function is used to connection establish
     socket.broadcast.emit('draw-segment', data) // broadcast.emit sends data to all clients except the sender
     // drw-segment is the event name by which other clients will listen to receive the drawing data
   })
-
-
-
+  
   socket.on('disconnect', () => {
     console.log('A user disconnected', socket.id)
   })
