@@ -38,9 +38,9 @@ io.on('connection', socket => { // this function is used to connection establish
   })
 })
 
-app.get('/', (req, res) => {
+app.get('/', (request, rsponse) => {
   res.send('Hello from Socket.io server')
-  console.log(req.query)
+  console.log(request.query)
 })
 
 // server.listen(5000, () => {
@@ -50,5 +50,5 @@ app.get('/', (req, res) => {
 const PORT = process.env.PORT || 5000
 
 server.listen(PORT, () => {
-  console.log(`Socket server running on port ${PORT}`)
+  console.log(`Socket server running on port: ${PORT}`)
 })
