@@ -21,8 +21,6 @@ Real-time drawing synchronization across multiple users
 High-performance canvas rendering (no React re-renders)
 WebSocket-based communication (Socket.io)
 
-Tech Stack--->
-
 Frontend:
 React (Class Components only)
 HTML5 Canvas API
@@ -75,7 +73,7 @@ Start drawing
 
 Drawings appear in real-time on all screens
 
--Upcoming Features
+-Upcoming Features ---->
 
 -Ghost cursors (show other users’ mouse pointers)
 
