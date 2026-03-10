@@ -93,7 +93,7 @@ All drawing logic is handled via native Canvas API
 
 React state is intentionally not used for drawing (performance reasons)
 
-Features Implemented:
+Features Implemented:->
 
 Freehand drawing using mouse
 Color selection (color picker + preset colors)
